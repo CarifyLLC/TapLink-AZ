@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Carify Tap Link</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Livvic:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+@font-face{
+font-family:"Cerebri";
+src:local("Cerebri Sans"),local("CerebriSans-Regular");
+font-display:swap;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+:root{
+--white:rgba(255,255,255,0.95);
+--line:rgba(255,255,255,0.28);
+--card:rgba(255,255,255,0.18);
+--card-hover:rgba(255,255,255,0.24);
+--panel:#646466;
+--shadow:0 10px 30px rgba(0,0,0,0.2);
+}
+
+html,body{
+width:100%;
+height:100%;
+}
+
+body{
+font-family:Arial, Helvetica, sans-serif;
+min-height:100vh;
+display:flex;
+justify-content:center;
+color:white;
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.38) 0%,
+rgba(0,0,0,0.45) 48%,
+rgba(111,111,111,0.10) 72%,
+rgba(111,111,111,0.22) 86%,
+rgba(111,111,111,0.38) 100%
+),
+url("https://i.imgur.com/r6leCMR.jpeg") center/cover no-repeat;
+background-attachment: fixed;
+}
+
+.phone-frame{
+position:relative;
+width:100%;
+max-width:430px;
+min-height:100vh;
+height:100dvh;
+overflow-x:hidden;
+overflow-y:auto;
+-webkit-overflow-scrolling:touch;
+display:flex;
+flex-direction:column;
+background:
+linear-gradient(
+to bottom,
+rgba(0,0,0,0.38) 0%,
+rgba(0,0,0,0.45) 48%,
+rgba(111,111,111,0.10) 72%,
+rgba(111,111,111,0.22) 86%,
+rgba(111,111,111,0.38) 100%
+),
+url("https://i.imgur.com/r6leCMR.jpeg") center/cover no-repeat;
+}
+
+.top-section{
+position:relative;
+padding:clamp(2rem,5.5vw,3rem) clamp(1rem,4vw,2rem) 2rem;
+min-height:0;
+flex:1 1 auto;
+display:flex;
+flex-direction:column;
+}
+
+.logo-ring{
+width:clamp(11.5rem,29vw,13.4rem);
+height:clamp(11.5rem,29vw,13.4rem);
+margin:0 auto;
+border:1px solid rgba(255,255,255,0.35);
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:9px;
+}
+
+.logo-circle{
+width:100%;
+height:100%;
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+overflow:hidden;
+box-shadow:var(--shadow);
+}
+
+.logo-circle img{
+width:115%;
+height:115%;
+object-fit:cover;
+border-radius:50%;
+}
+
+.tagline{
+margin-top:clamp(1.1rem,3vw,1.75rem);
+text-align:center;
+color:rgba(255,255,255,0.7);
+font-size:clamp(1rem,2.8vw,1.2rem);
+line-height:1.25;
+font-weight:300;
+font-family:"Livvic",Arial,sans-serif;
+padding:0 0.5rem;
+opacity:0.7;
+}
+
+.divider{
+width:calc(100% - 0.5rem);
+height:1px;
+background:var(--line);
+margin:1rem auto 0;
+}
+
+.buttons-group{
+margin-top:2.4rem;
+display:flex;
+flex-direction:column;
+gap:1rem;
+padding:0 0.35rem;
+}
+
+.link-btn{
+min-height:clamp(3.8rem,10vw,4.6rem);
+padding:0.9rem 1rem;
+background:var(--card);
+backdrop-filter:blur(2px);
+-webkit-backdrop-filter:blur(2px);
+border:1px solid rgba(255,255,255,0.06);
+text-decoration:none;
+color:var(--white);
+display:flex;
+align-items:center;
+justify-content:center;
+gap:clamp(0.7rem,2vw,1rem);
+font-size:clamp(1.2rem,5vw,1.625rem);
+font-weight:350;
+letter-spacing:0.4px;
+transition:0.25s ease;
+text-align:center;
+font-family:"Cerebri",Arial,sans-serif;
+}
+
+.link-btn:hover{
+background:var(--card-hover);
+transform:translateY(-1px);
+}
+
+.link-btn img{
+width:clamp(1.63rem,4.8vw,2.15rem);
+height:clamp(1.63rem,4.8vw,2.15rem);
+object-fit:contain;
+}
+
+/* WEB PAGE BUTTON GAP (400px from Telegram) */
+.web-btn-gap{
+margin-top:200px;
+}
+
+.social-row{
+margin-top:40px;
+display:flex;
+justify-content:center;
+align-items:center;
+gap:0.85rem;
+width:100%;
+}
+
+.social-circle{
+width:48px;
+height:48px;
+border:1.6px solid rgba(255,255,255,0.65);
+border-radius:50%;
+display:flex;
+align-items:center;
+justify-content:center;
+background:transparent;
+transition:0.25s ease;
+}
+
+.social-circle:hover{
+background:rgba(255,255,255,0.1);
+transform:translateY(-2px);
+}
+
+.social-circle img{
+width:34px;
+height:34px;
+object-fit:contain;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="phone-frame">
+
+<section class="top-section">
+
+<div class="logo-ring">
+<div class="logo-circle">
+<img src="https://i.imgur.com/x61eMHf.png">
+</div>
+</div>
+
+<p class="tagline">
+Luxury and Performance, Delivered<br>Worldwide.
+</p>
+
+<div class="divider"></div>
+
+<div class="buttons-group">
+
+<a href="https://api.whatsapp.com/send/?phone=821072167665&text&type=phone_number&app_absent=0" class="link-btn" target="_blank" rel="noopener">
+<img src="https://i.imgur.com/VWox0g2.png">
+<span>WhatsApp</span>
+</a>
+
+<a href="https://chat.whatsapp.com/Ed239udNHK7FzWVyxlv1gd" class="link-btn" target="_blank" rel="noopener">
+<img src="https://i.imgur.com/aUNY4lA.png">
+<span>WhatsApp Group</span>
+</a>
+
+<a href="https://t.me/Carifykr" class="link-btn" target="_blank" rel="noopener">
+<img src="https://i.imgur.com/hvz23V0.png">
+<span>Telegram</span>
+</a>
+
+<a href="https://www.carify-global.com" class="link-btn web-btn-gap" target="_blank" rel="noopener">
+<img src="https://i.imgur.com/8SEAwBH.png">
+<span>WEB Page</span>
+</a>
+
+</div>
+
+<div class="social-row">
+
+<a href="https://www.instagram.com/carify.global" class="social-circle" target="_blank" rel="noopener">
+<img src="https://i.imgur.com/ChOciDj.png" alt="Instagram">
+</a>
+
+<a href="https://www.facebook.com/carifyllc" class="social-circle" target="_blank" rel="noopener">
+<img src="https://i.imgur.com/SaNXlxl.png" alt="Facebook">
+</a>
+
+<a href="https://www.tiktok.com/@carify.llc?_r=1&_t=ZS-91em6C7mFOK" class="social-circle" target="_blank" rel="noopener">
+<img src="https://i.imgur.com/Xh6ZsdR.png" alt="TikTok">
+</a>
+
+</div>
+
+</section>
+
+</div>
+
+</body>
+</html>
